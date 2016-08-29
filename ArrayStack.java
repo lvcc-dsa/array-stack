@@ -86,11 +86,11 @@ public class ArrayStack {
 
   // note: will show the topmost value of the array
   public void peek() {
-    if (isEmpty(false) && storage[top] == storage[0]) { 
-      System.out.println("PEEK TOP = " + storage[top]);
+    if (isEmpty()) { 
+      System.out.println("PEEK TOP = NULL");
       System.out.println();
     } else {
-      System.out.println("PEEK TOP = " + storage[top-1]);
+      System.out.println("PEEK TOP = " + storage[top]);
       System.out.println();
     }
   }
