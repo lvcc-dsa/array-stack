@@ -58,10 +58,10 @@ Stack
       PRINT storage[top] was successfully removed
       
      PROCEDURE peek
-      IF stack != isEmpty AND storage[top] == storage[0]
-       PRINT storage[top]
+      IF isEmpty
+       PRINT NULL
       ELSE 
-       PRINT storage[top-1])
+       PRINT storage[top]
     
      PROCEDURE main
      // show that stack is empty
