@@ -39,21 +39,21 @@ public class ArrayStack {
   
   // note: will check if it's true that the array is empty
   private boolean isEmpty() {
-    if (storage[/*???*/] == null) {
+    if (storage[0] == null) { // note: compares if index[0] or top is null or empty
       System.out.println(" "); // todo: print error message here
       System.out.println(); // note: this prints optional new line for readability
       return true;
     } 
-    return false;
+    return false; // note: defaults to false
   }
 
   // note: will check if it's true that the array is full
   private boolean isFull() {
-    if (top == capacity) {
+    if (top == capacity) { // note: compares if top has reached capacity limit
       System.out.println(" "); // todo: print error message here
       return true;
     } 
-    return false;
+    return false; // note: defaults to false
   }
 
   // note: will add value to the array
@@ -63,23 +63,23 @@ public class ArrayStack {
       System.out.println(); // note: prints optional new line for readability
     } else {
       System.out.println("... trying to push on stack[" + top + "] ...");
-      storage[top] = value;
-      top; /* should increment or decrement top? */
-      System.out.println(value + " was successfully _________.");
+      storage[top]; // todo: assign the value to top
+      top; // todo: should increment or decrement?
+      System.out.println(value + " was successfully _________."); // todo: what does push do?
       System.out.println(); // prints optional new line for readability
     }
   }
 
   // note: will remove value to the array
   public void pop() {
-    if (isEmpty()) {
+    if (isEmpty()) { // note: checks if empty, then stop
       System.out.println(" "); // print error message here
       System.out.println(); // prints optional new line for readability
     } else {
       System.out.println("... trying to pop stack[" + (top-1) + "] ...");
-      storage[top] = /*???*/;
-      top; /* should increment or decrement top? */
-      System.out.println(storage[top] + " was successfully _________.");
+      storage[top]; // todo: empty the value of top
+      top; // todo: should increment or decrement?
+      System.out.println(storage[top] + " was successfully _________."); // todo: what does pop do?
       System.out.println();
     }
   }
