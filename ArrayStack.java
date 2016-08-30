@@ -45,11 +45,11 @@ public class ArrayStack {
   }
 
   public void push(String value) {
+    System.out.println("... trying to push on stack[" + top + "] ...");
     if (isFull()) {
       System.out.println("ADD FAILED.");
       System.out.println();
-    } else {
-      System.out.println("... trying to push on stack[" + top + "] ...");
+    } else {      
       storage[top] = value;
       top++;
       System.out.println(value + " was successfully added.");
@@ -58,11 +58,11 @@ public class ArrayStack {
   }
 
   public void pop() {
+    System.out.println("... trying to pop stack[" + (top-1) + "] ...");
     if (isEmpty()) {
       System.out.println("REMOVE FAILED.");
       System.out.println();
-    } else {
-      System.out.println("... trying to pop stack[" + (top-1) + "] ...");
+    } else {      
       storage[top] = null;
       top--;
       System.out.println(storage[top] + " was successfully removed.");
@@ -71,10 +71,7 @@ public class ArrayStack {
   }
 
   public void peek() {
-    if (isEmpty()) {
-      System.out.println("PEEK TOP = NULL");
-      System.out.println();
-    } else {
+    if (!isEmpty()) {
       System.out.println("PEEK TOP = " + storage[top]);
       System.out.println();
     }
