@@ -58,11 +58,11 @@ public class ArrayStack {
 
   // note: will add value to the array
   public void push(String value) {
+    System.out.println("... trying to push on stack[" + top + "] ...");
     if (isFull()) {
       System.out.println(" "); // todo: print error message here
       System.out.println(); // note: prints optional new line for readability
-    } else {
-      System.out.println("... trying to push on stack[" + top + "] ...");
+    } else {      
       storage[top]; // todo: assign the value to top
       top; // todo: should increment or decrement?
       System.out.println(value + " was successfully _________."); // todo: what does push do?
@@ -72,11 +72,11 @@ public class ArrayStack {
 
   // note: will remove value to the array
   public void pop() {
+    System.out.println("... trying to pop stack[" + (top-1) + "] ...");
     if (isEmpty()) { // note: checks if empty, then stop
       System.out.println(" "); // print error message here
       System.out.println(); // prints optional new line for readability
-    } else {
-      System.out.println("... trying to pop stack[" + (top-1) + "] ...");
+    } else {      
       storage[top]; // todo: empty the value of top
       top; // todo: should increment or decrement?
       System.out.println(storage[top] + " was successfully _________."); // todo: what does pop do?
